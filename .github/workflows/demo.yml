@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: greeting
-        run: echo hello connard && apt update -qq
+        run: echo hello connard && sudo apt update -qq
       - name: copy-code
         id: copy-code
         uses: actions/checkout@v4
