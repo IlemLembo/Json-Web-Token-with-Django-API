@@ -1,0 +1,17 @@
+name: demo
+
+on: push
+
+jobs:
+  demo_job:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: greeting
+        run: echo hello connard && apt update -qq
+      - name: copy-code
+        id: copy-code
+        uses: actions/checkout@v4
+      - name:  install deps
+        run: pip3 install -r requirements.txt
+      - name: all done
+        run: echo all done
